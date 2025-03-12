@@ -1,0 +1,14 @@
+<div class="register-container">
+     <div class="register-box">
+     <h2>Register</h2>
+     <input type="text" placeholder="Full Name" [(ngModel)]="registerData.fullName" required>
+     <input type="email" placeholder="Email" [(ngModel)]="registerData.email" required>
+     <input type="password" placeholder="Password" [(ngModel)]="registerData.password" required>
+     <select [(ngModel)]="registerData.role">
+     <option value="User">User</option>
+     <option value="Admin">Admin</option>
+     </select>
+     <button (click)="OnRegister()">Register</button>
+     <p>Already have an account? <a routerLink="/login">Login</a></p>
+     </div>
+     </div>

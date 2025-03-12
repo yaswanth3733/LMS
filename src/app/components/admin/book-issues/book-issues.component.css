@@ -1,0 +1,53 @@
+.container {
+
+    max-width: 900px;
+  
+    margin: auto;
+  
+    text-align: center;
+  
+  }
+  
+  .table {
+  
+    width: 100%;
+  
+    border-collapse: collapse;
+  
+  }
+  
+  th, td {
+  
+    padding: 10px;
+  
+    border: 1px solid #ddd;
+  
+  }
+  
+  th {
+  
+    background-color: #007bff;
+  
+    color: white;
+  
+  }
+  
+  button {
+  
+    background-color: #28a745;
+  
+    color: white;
+  
+    border: none;
+  
+    padding: 5px 10px;
+  
+    cursor: pointer;
+  
+  }
+  
+  button:disabled {
+  
+    background-color: #ccc;
+  
+  } 

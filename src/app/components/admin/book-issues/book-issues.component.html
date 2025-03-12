@@ -1,0 +1,32 @@
+<div class="container">
+    <h2>📚 Issued Books</h2>
+    <table class="table">
+    <thead>
+    <tr>
+    <th>Issue ID</th>
+    <th>User ID</th>
+    <th>Book ID</th>
+    <th>Issue Date</th>
+    <th>Due Date</th>
+    <th>Return Date</th>
+    <th>Fine Amount</th>
+    <th>Return</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let issue of bookIssues">
+    <td>{{ issue.issueId }}</td>
+    <td>{{ issue.userId }}</td>
+    <td>{{ issue.bookId }}</td>
+    <td>{{ issue.issueDate | date:'yyyy-MM-dd' }}</td>
+    <td>{{ issue.dueDate | date:'yyyy-MM-dd' }}</td>
+    <td>{{ issue.returnDate ? (issue.returnDate | date:'yyyy-MM-dd') : 'Not Returned' }}</td>
+    <td>{{ issue.fineAmount || '₹0' }}</td>
+    <td>
+    <input type="date" [(ngModel)]="returnDate[issue.issueId]" [disabled]="issue.returnDate">
+    <button (click)="returnBook(issue.issueId)" [disabled]="issue.returnDate">Return</button>
+    </td>
+    </tr>
+    </tbody>
+    </table>
+    </div>
