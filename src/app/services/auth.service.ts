@@ -16,10 +16,11 @@ export class AuthService {
    return this.http.post(`${this.baseUrl}/login`, loginData).pipe(
      tap((response: any) => {
        console.log("Login Response:", response); // Debugging
-       if (response.token && response.role && response.userId) {
+       if (response.token && response.role && response.userId && response.userName) {
          localStorage.setItem('token', response.token);
          localStorage.setItem('role', response.role);
          localStorage.setItem('userId', response.userId.toString()); // Store userId as a string
+         localStorage.setItem('userName',response.userName);
          console.log("Role Stored:", response.role); // Debugging
        } else {
          console.error("Role or User ID not found!"); // Debugging
@@ -34,6 +35,10 @@ export class AuthService {
  // ✅ Get the role of the logged-in user
  getUserRole(): string | null {
    return localStorage.getItem('role');
+ }
+
+ getUserName(): string|null{
+  return localStorage.getItem('userName');
  }
  // ✅ Get the user ID of the logged-in user
  getUserId(): number | null {

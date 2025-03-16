@@ -8,6 +8,7 @@
     <tr>
     <th>Book Title</th>
     <th>Status</th>
+    <th>Action</th>
     </tr>
     </thead>
     <tbody>
@@ -17,6 +18,9 @@
     <span class="status pending" *ngIf="request.status === 'Pending'">⏳ Pending</span>
     <span class="status accepted" *ngIf="request.status === 'Accepted'">✅ Accepted</span>
     <span class="status rejected" *ngIf="request.status === 'Rejected'">❌ Rejected</span>
+    </td>
+    <td>
+        <button *ngIf="request.status === 'Pending'" (click) = "deleteRequest(request.requestId)" class="delete-btn">Delete</button>
     </td>
     </tr>
     </tbody>

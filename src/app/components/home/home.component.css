@@ -47,7 +47,6 @@ a:hover {
 
 }
 
-/* Navbar Styles */
 
 .navbar {
 
@@ -115,7 +114,6 @@ a:hover {
 
 }
 
-/* Welcome Section */
 
 .welcome-section {
 
@@ -232,7 +230,6 @@ a:hover {
 
 }
 
-/* Services Section */
 
 .services-section {
 
@@ -456,55 +453,169 @@ a:hover {
 
 }
 
-.service-link {
 
-  display: inline-block;
+
+.user-btn {
+
+  background-color: #3498db;
+
+  color: white;
+
+  padding: 8px 15px;
+
+  border: none;
+
+  border-radius: 4px;
 
   font-weight: 600;
 
+  cursor: pointer;
+
+  transition: all 0.3s ease;
+
+}
+
+.user-btn:hover {
+
+  background-color: #2980b9;
+
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+
+}
+
+/* Dropdown styling */
+
+.dropdown {
+
   position: relative;
-
-  z-index: 1;
-
-}
-
-.service-card:nth-child(1) .service-link {
-
-  color: #3498db;
-
-}
-
-.service-card:nth-child(2) .service-link {
-
-  color: #9b59b6;
-
-}
-
-.service-card:nth-child(3) .service-link {
-
-  color: #2ecc71;
-
-}
-
-.service-link:after {
-
-  content: '→';
-
-  margin-left: 5px;
-
-  transition: transform 0.3s ease;
 
   display: inline-block;
 
 }
 
-.service-link:hover:after {
+.dropdown-content {
 
-  transform: translateX(5px);
+  display: none;
+
+  position: absolute;
+
+  right: 0;
+
+  min-width: 160px;
+
+  background-color: white;
+
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+
+  border-radius: 4px;
+
+  z-index: 1001;
+
+  overflow: hidden;
 
 }
 
-/* Responsive Design */
+.dropdown:hover .dropdown-content {
+
+  display: block;
+
+  animation: fadeIn 0.3s ease;
+
+}
+
+/* Delete account button */
+
+.delete-btn {
+
+  width: 100%;
+
+  background-color: white;
+
+  color: #e74c3c;
+
+  padding: 10px 15px;
+
+  text-align: left;
+
+  border: none;
+
+  font-weight: 500;
+
+  cursor: pointer;
+
+  transition: all 0.3s ease;
+
+  display: flex;
+
+  align-items: center;
+
+}
+
+.delete-btn:hover {
+
+  background-color: #ffebee;
+
+  color: #c0392b;
+
+}
+
+/* Logout button */
+
+.logout-btn {
+
+  width: 100%;
+
+  background-color: white;
+
+  color: #f39c12;
+
+  padding: 10px 15px;
+
+  text-align: left;
+
+  border: none;
+
+  font-weight: 500;
+
+  cursor: pointer;
+
+  transition: all 0.3s ease;
+
+  display: flex;
+
+  align-items: center;
+
+  border-top: 1px solid #f1f1f1;
+
+}
+
+.logout-btn:hover {
+
+  background-color: #fff8e1;
+
+  color: #d35400;
+
+}
+
+@keyframes fadeIn {
+
+  from {
+
+    opacity: 0;
+
+    transform: translateY(-10px);
+
+  }
+
+  to {
+
+    opacity: 1;
+
+    transform: translateY(0);
+
+  }
+
+} 
 
 @media (max-width: 768px) {
 
